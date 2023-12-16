@@ -1,0 +1,364 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+   <meta charset="UTF-8">
+   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+   <link rel="stylesheet" href="css/utilities.css">
+   <link rel="stylesheet" href="css/style.css">
+   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.13.0/css/all.min.css">
+   <link rel="preconnect" href="https://fonts.googleapis.com">
+   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600&family=Lato:ital,wght@0,400;0,700;1,900&family=Noto+Sans:ital,wght@0,300;0,400;0,900;1,900&display=swap" rel="stylesheet">
+   <title>Bienvendio a Agenda Medica</title>
+</head>
+
+<body id="home">
+   <header class="hero">
+
+      <div id="navbar" class="navbar">
+         <h1 class="logo">
+           <span class="text-primary">
+             <i class="fas fa-laptop-medical" style="color: #cacfd6;"></i>
+             Agenda</span>Medica
+         </h1>
+         <button id="mobile-menu-button" class="mobile-menu-button">&#9776;</button>
+         <nav>
+           <ul>
+             <li><a href="#home">Inicio</a></li>
+             <li><a href="#about">Que es?</a></li>
+             <!--<li><a href="#uses">Caso</a></li> -->
+             <li><a href="#carousel">Equipo</a></li>
+             <li><a href="#contact">Solicita una demo</a></li>
+             <li><a href="productos.html">Ingresar</a></li>
+           </ul>
+         </nav>
+       </div>
+
+      <div class="content">
+         <h1>Acceso en cualquier momento y lugar</h1>
+         <p>Consulta tu <strong>Agenda Médica</strong> en línea desde <strong>cualquier dispositivo</strong> con conexión a Internet</p>
+         <a href="#about" class="btn"><i class="fas fa-chevron-right"></i> Quiero saber mas!</a>
+      </div>
+   </header>
+   <main>
+      
+      <section id="about" class="icons bg-light">
+         <div class="flex-items">
+            <div>
+              <i class="fas fa-bell fa-2x" style="color: #cacfd6;"></i>
+               <div>
+                  <h3>Recordatorios automáticos</h3>
+                  <p>Envio de recordatorios 
+                    automáticos de tus citas por correo electrónico o mensajes por WhatsApp.</p>
+               </div>
+            </div>
+
+            <div>
+              <i class="fas fa-book-medical fa-2x" style="color: #cacfd6;"></i>
+               <div>
+                  <h3>Historial médico organizado</h3>
+                  <p>Mantiene un registro de tus citas anteriores y futuras en un solo lugar.</p>
+               </div>
+            </div>
+
+            <div>
+              <i class="fas fa-shield-virus fa-2x" style="color: #cacfd6;"></i>
+               <div>
+                  <h3>Seguridad de la información</h3>
+                  <p>Ofrecemos los mas altos estándares de seguridad para proteger tus datos personales y médicos.</p>
+               </div>
+            </div>
+         </div>
+      </section>
+
+      <section class="mobile-section flex-columns">
+            <div class="column">
+               <div class="column-2 bg-primary">
+                  <h4>Que ofrecemos?</h4>
+                  <h2>Un sistema de gestion para tus asuntos medicos en línea</h2>
+                  <p>Una agenda médica en línea nos permite tener mayor comodidad, organización y 
+                    recordatorios que pueden mejorar la gestión de tus citas médicas, 
+                    lo que puede ser especialmente importante si tienes un horario médico ocupado o si necesitas un seguimiento constante de tu salud.</p>
+
+                    <a class="btn" id="openModalBtn"><i class="fas fa-chevron-right"></i><i class="fas fa-chevron"></i> Consultorios Disponibles!</a>
+
+
+                    <div id="myModal" class="modal">
+                        <div class="modal-content">
+                            <span class="close" id="closeModalBtn">&times;</span>
+                            <iframe 
+                              id="iframe" 
+                              src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3273.362293129994!2d-58.049048709700635!3d-34.87224770173906!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x95a2de79819d8ac9%3A0x534d858aa61571fd!2sCentro%20M%C3%A9dico%20de%20Diagn%C3%B3stico!5e0!3m2!1ses!2sar!4v1698163204680!5m2!1ses!2sar" 
+                              width="400" 
+                              height="300" 
+                              style="border:0;" 
+                              allowfullscreen="" 
+                              loading="lazy" 
+                              referrerpolicy="no-referrer-when-downgrade">
+                           </iframe>
+                        </div>
+                    </div>
+                  <h3>Consulta que clinica y consultorio puede atenderte mas rapido!</h3>
+                  <p>Muchas clínicas y consultorios médicos permiten la reserva de citas en línea a través de nuestro sistema, lo que simplifica el proceso de programación.</p>
+                  <a href="#contact" class="btn"><i class="fas fa-chevron-right"></i><i class="fas fa-chevron"></i> La quiero!</a>
+               </div>
+            </div>
+         </div>
+      </section>
+
+      <section class="web-section flex-columns">
+         <div class="row">
+            <div class="column">
+               <div class="column-1">
+                  <img src="img/codos.jpg" alt="">
+               </div>
+            </div>
+            <div class="column">
+               <div class="column-2 bg-primary">
+                  <h4>Que ofrecemos?</h4>
+                  <h3>Un sistema de gestion para tus asuntos medicos en línea</h3>
+                  <p>Una agenda médica en línea nos permite tener mayor comodidad, organización y 
+                    recordatorios que pueden mejorar la gestión de tus citas médicas, 
+                    lo que puede ser especialmente importante si tienes un horario médico ocupado o si necesitas un seguimiento constante de tu salud.</p>
+                    <br>
+                    <a class="btn" id="openModalBtn" href="#contact" ><i class="fas fa-chevron-right"></i><i class="fas fa-chevron"></i> Consultorios Disponibles!</a>
+                    <br>
+
+
+                    <div id="myModal" class="modal">
+                        <div class="modal-content">
+                            <span class="close" id="closeModalBtn">&times;</span>
+                            <iframe 
+                              id="iframe" 
+                              src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3273.362293129994!2d-58.049048709700635!3d-34.87224770173906!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x95a2de79819d8ac9%3A0x534d858aa61571fd!2sCentro%20M%C3%A9dico%20de%20Diagn%C3%B3stico!5e0!3m2!1ses!2sar!4v1698163204680!5m2!1ses!2sar" 
+                              width="400" 
+                              height="300" 
+                              style="border:0;" 
+                              allowfullscreen="" 
+                              loading="lazy" 
+                              referrerpolicy="no-referrer-when-downgrade">
+                           </iframe>                   
+                        </div>
+                    </div>
+                  <h3>Consulta que clinica y consultorio puede atenderte mas rapido!</h3>
+                  <p>Muchas clínicas y consultorios médicos permiten la reserva de citas en línea a través de nuestro sistema, lo que simplifica el proceso de programación.</p>
+                  <br>
+                  <a href="#contact" class="btn"><i class="fas fa-chevron-right"></i><i class="fas fa-chevron"></i> La quiero!</a>
+               </div>
+            </div>
+         </div>
+      </section>
+
+      <section id="uses" class="mobile-section uses flex-columns flex-reverse">
+            <div class="column">
+               <div class="column-2 bg-secondary">
+                  <h4>Que podes hacer en la App?</h4>
+                  <h3>Gestión de datos</h3>
+                  <p>Permite a los usuarios ingresar, editar y eliminar información, 
+                    como citas, tareas, contactos, etc...</p>
+                  <h3>Calendario y programación</h3>
+                  <p> Ofrece la capacidad de programar eventos, citas, 
+                    recordatorios y tareas, y muestra un calendario para visualizarlos. <br> 
+                    Admite sincronizacion con Google Calendar.</p>
+                  <h3>Notificaciones</h3>
+                  <p>Envía notificaciones push para recordatorios de citas, 
+                    actualizaciones de la aplicación u otros mensajes relevantes.</p>
+               </div>
+            </div>
+         </div>
+      </section>
+
+      <section id="uses" class="web-section uses flex-columns flex-reverse">
+         <div class="row">
+            <div class="column">
+               <div class="column-1">
+                  <img src="img/app_ejemplo.jpg" alt="">
+               </div>
+            </div>
+            <div class="column">
+               <div class="column-2 bg-secondary">
+                  <h4>Que podes hacer en la App?</h4>
+                  <h2>Gestión de datos</h2>
+                  <p>Permite a los usuarios ingresar, editar y eliminar información, 
+                    como citas, tareas, contactos, etc...</p>
+                  <h2>Calendario y programación</h2>
+                  <p> Ofrece la capacidad de programar eventos, citas, 
+                    recordatorios y tareas, y muestra un calendario para visualizarlos. <br> 
+                    Admite sincronizacion con Google Calendar.</p>
+                  <h2>Notificaciones</h2>
+                  <p>Envía notificaciones push para recordatorios de citas, 
+                    actualizaciones de la aplicación u otros mensajes relevantes.</p>
+               </div>
+            </div>
+         </div>
+      </section>
+
+      <!--<section id="team" class="team section-padding">
+         <header class="section-header">
+            <h4>Quienes somos?</h4>
+            <h2>Somos el grupo <strong>Home</strong></h2>
+            <p>Lideres en hacerte la vida mas fácil</p>
+         </header>
+      </section> -->
+
+      <!-- Contact -->
+
+      <section id="contact" class="contact flex-columns">
+         <div class="row">
+            <div class="column">
+               <div class="column-1">
+                  <img src="img/contacto.jpg" alt="">
+               </div>
+            </div>
+            <div class="column">
+               <div class="column-2 bg-light">
+                  <h2>Solicita una demo</h2>
+                  <form action="#" class="callback-form" id="contact-form">
+                     <div class="form-control">
+                         <label for="name">Nombre:</label>
+                         <input type="text" name="name" id="name" placeholder="Ingresa tu Nombre" required pattern="[A-Za-z\s]+">
+                         <small>Ingrese un nombre válido (solo letras y espacios).</small>
+                     </div>
+                     <div class="form-control">
+                         <label for="email">Email:</label>
+                         <input type="email" name="email" id="email" placeholder="Ingresa tu Email" required>
+                         <small>Ingrese un correo electrónico válido.</small>
+                     </div>
+                     <div class="form-control">
+                         <label for="phone">Teléfono:</label>
+                         <input type="tel" name="phone" id="phone" placeholder="Ingresa tu Teléfono" required pattern="[0-9]+">
+                         <small>Ingrese un número de teléfono válido (solo números).</small>
+                     </div>
+                     <input type="submit" value="Enviar" id="submit" class="btn">
+                 </form>
+               </div>
+            </div>
+         </div>
+      </section>
+
+
+      <section id="carousel" class="carousel" aria-label="carousel">
+         <div class="carousel" data-carousel>
+           <button class="carousel-button prev" data-carousel-button="prev">&#11148;</button>
+           <button class="carousel-button next" data-carousel-button="next">&#11150;</button>
+           <ul data-slides>
+             <li class="slide" data-active>
+               <img src="img/pediatra.jpg" alt="">
+               <!--<div class="text-overlay">Usando nuestra App participas por una Vacaciones con todo incluido por 15 dias en Mar del Plata!</div> -->
+             </li>
+             <li class="slide">
+               <img src="img/cardiologo.jpg" alt="">             
+             </li>
+             <li class="slide">
+               <img src="img/trauma.jpg" alt="">    
+             </li>
+             <li class="slide">
+               <img src="img/neurologo.jpg" alt="">    
+             </li>
+           </ul>
+         </div>
+       </section>
+   </main>
+
+   <footer class="footer bg-dark">
+      <div class="social">
+         <a href="https://www.facebook.com/codoacodooficial/"><i class="fab fa-facebook fa-2x"></i></a>
+         <a href="https://twitter.com/EducacionBA/status/1404807225420435463?lang=es"><i class="fab fa-twitter fa-2x"></i></a>
+         <a href="https://www.youtube.com/channel/UCzelX_Pd_RkibwOMrYudIrQ"><i class="fab fa-youtube fa-2x"></i></a>
+      </div>
+      <p>Copyright &copy; 2023 - Agenda Medica</p>
+      <a href="https://www.freepik.es/foto-gratis/seccion-media-hombre-brazo-cruzado_3794406.htm#page=2&query=codo%20persona&position=22&from_view=search&track=ais"></a>
+      
+   
+   </footer>
+</body>
+
+</html>
+
+<script>
+   document.getElementById("mobile-menu-button").addEventListener("click", function () {
+  var nav = document.querySelector(".navbar nav ul");
+  nav.classList.toggle("show-mobile-menu");
+});
+</script>
+
+<script>
+   const contactForm = document.getElementById("contact-form");
+   
+   contactForm.addEventListener("submit", function (e) {
+       e.preventDefault();
+   
+       const nameInput = document.getElementById("name");
+       const emailInput = document.getElementById("email");
+       const phoneInput = document.getElementById("phone");
+   
+       const name = nameInput.value;
+       const email = emailInput.value;
+       const phone = phoneInput.value;
+   
+       const nameRegex = /^[A-Za-z\s]+$/; // Permite letras y espacios
+       const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/; // Valida un formato de correo electrónico básico
+       const phoneRegex = /^[0-9]+$/; // Permite solo números
+   
+       if (nameRegex.test(name) && emailRegex.test(email) && phoneRegex.test(phone)) {
+           alert(`Datos del formulario:
+                  Nombre: ${name}
+                  Email: ${email}
+                  Teléfono: ${phone}`);
+       } else {
+           alert("Por favor, completa todos los campos correctamente.");
+       }
+   });
+</script>
+   
+<script>
+document.getElementById("openModalBtn").addEventListener("click", function() {
+    document.getElementById("myModal").style.display = "block";
+});
+
+document.getElementById("closeModalBtn").addEventListener("click", function() {
+    document.getElementById("myModal").style.display = "none";
+});
+</script>
+
+<script>
+   document.addEventListener("DOMContentLoaded", function() {
+     var links = document.querySelectorAll('a[href^="#"]');
+     links.forEach(function(link) {
+       link.addEventListener('click', function(event) {
+         event.preventDefault();
+         var targetId = this.getAttribute('href').substring(1);
+         var targetElement = document.getElementById(targetId);
+         if (targetElement) {
+           targetElement.scrollIntoView({ behavior: 'smooth' });
+         }
+       });
+     });
+   });
+ </script>
+
+ <script>
+   const buttons = document.querySelectorAll("[data-carousel-button]")
+
+buttons.forEach(button => {
+  button.addEventListener("click", () => {
+    const offset = button.dataset.carouselButton === "next" ? 1 : -1
+    const slides = button
+      .closest("[data-carousel]")
+      .querySelector("[data-slides]")
+
+    const activeSlide = slides.querySelector("[data-active]")
+    let newIndex = [...slides.children].indexOf(activeSlide) + offset
+    if (newIndex < 0) newIndex = slides.children.length - 1
+    if (newIndex >= slides.children.length) newIndex = 0
+
+    slides.children[newIndex].dataset.active = true
+    delete activeSlide.dataset.active
+  })
+})
+
+ </script>
+
+ 

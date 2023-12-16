@@ -1,0 +1,423 @@
+@import url("https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400&display=swap");
+
+* {
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+}
+
+body {
+  font-family: 'lato', sans-serif;
+  background: #fff;
+  color: #262525;
+  line-height: 1.6;
+}
+
+
+ul {
+  list-style: none;
+}
+
+a {
+  color: #333;
+  text-decoration: none;
+}
+
+h1,
+h2 {
+  font-family: 'Lato', sans-serif;
+  font-weight: 200;
+  line-height: 1.2;
+}
+
+p {
+  margin: 10px 0;
+}
+
+img {
+  width: 100%;
+}
+
+/* Navbar */
+
+.navbar {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  background-color: rgb(17, 165, 182);
+  color: #abadb1;
+  opacity: 0.8;
+  width: 100%;
+  height: 70px;
+  position: fixed;
+  top: 0px;
+  padding: 0 30px;
+}
+
+.navbar a {
+  color: #dfe1e7;
+  padding: 5px 10px;
+  margin: 0 0px;
+}
+
+.navbar a:hover {
+  border-bottom: #b0bbe9 2px solid;
+}
+
+.navbar ul {
+  display: flex;
+}
+
+.navbar .logo {
+  font-weight: 400;
+}
+
+/* Estilos para dispositivos móviles (ancho de pantalla máximo) */
+@media (max-width: 768px) {
+  .navbar {
+    flex-direction: column; /* Cambiar a un diseño de columna */
+    align-items: center; /* Centrar los elementos horizontalmente */
+  }
+
+  .navbar ul {
+    width: 100%; /* Ocupar todo el ancho disponible */
+    display: flex;
+    flex-direction: column; /* Apilar los elementos verticalmente */
+  }
+
+  .navbar li {
+    margin: 5px 0; /* Agregar espacio entre los elementos */
+    text-align: center; /* Centrar el texto horizontalmente */
+  }
+
+  .navbar ul {
+    display: none; /* Ocultar el menú de forma predeterminada */
+  }
+
+  .specs {
+    display: block; /* Mostrar la sección en dispositivos móviles */
+  }
+
+  .specs .column-1 img {
+    display: none; /* Ocultar la imagen en dispositivos móviles */
+  }
+
+  /* Ajustar el ancho de la columna de texto al 100% del ancho del dispositivo */
+  .specs .column-2 {
+    width: 100%;
+    padding: 20px; /* Opcional: Agregar espacio adicional alrededor del contenido */
+  }
+
+  .mobile-menu-button {
+  display: block; /* Ocultar el botón por defecto */
+  background: rgb(17, 165, 182);
+  border: none;
+  font-size: 24px;
+  color: #cacfd6;
+  cursor: pointer;
+}
+
+.navbar ul.show-mobile-menu {
+  display: block;
+  background: #14BACE;
+}
+
+.mobile-menu-button.show-button {
+  display: block; /* Mostrar el botón en dispositivos móviles */
+}
+
+.web-section{
+  display: none; /* Ocultar la sección en dispositivos no móviles */
+}
+}
+
+/* Estilos para dispositivos no móviles (ancho de pantalla mínimo) */
+@media (min-width: 769px) {
+  .mobile-section {
+    display: none; /* Ocultar la sección en dispositivos no móviles */
+  }
+
+  .mobile-menu-button {
+    display: none; /* Ocultar el botón en dispositivos grandes */
+  }
+
+  .navbar ul.show-mobile-menu {
+    display: block;
+    background: rgb(17, 165, 182);
+  }
+}
+
+
+
+
+.hero {
+  background: url('portada.jpg') no-repeat center center/cover;
+  height: 100vh;
+  position: relative;
+  color: #fff;
+}
+
+.hero .content {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  height: 100%;
+  padding: 0 20px;
+}
+
+.hero .content h1 {
+  font-size: 55px;
+}
+
+.hero .content p {
+  font-size: 23px;
+  max-width: 600px;
+  margin: 20px 0 30px;
+}
+
+.hero::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.6);
+}
+
+.hero * {
+  z-index: 10;
+}
+
+/* Icons */
+
+.icons {
+  padding: 30px;
+}
+
+.icons h3 {
+  font-weight: bold;
+  margin-bottom: 15px;
+}
+.icons i {
+  background: rgb(17, 165, 182);
+  color: #fff;
+  padding: 1rem;
+  border-radius: 50%;
+  margin-bottom: 15px;
+}
+
+.cases img:hover {
+  opacity: 0.7;
+}
+
+.team .flex-items img {
+  border-radius: 50px;
+}
+
+/* CallBack Form */
+
+.callback-form {
+  width: 100%;
+  padding: 20px 0;
+}
+
+.callback-form label {
+  display: block;
+  margin-bottom: 5px;
+}
+
+.callback-form .form-control {
+  margin-bottom: 15px;
+}
+
+.callback-form input {
+  width: 100%;
+  padding: 4px;
+  height: 40px;
+  border: #f5f5f5 1px solid;
+}
+
+.callback-form input:focus {
+  outline-color: #28a745;
+}
+
+.callback-form .btn {
+  padding: 12px 0;
+  margin-top: 20px;
+  text-align: center;
+}
+
+/* Footer */
+
+.footer {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  height: 200px;
+}
+
+.footer a {
+  color: #fff;
+}
+
+.footer a:hover {
+  color: #424874;
+}
+
+.footer .social > * {
+  margin-right: 30px;
+}
+
+.modal {
+  display: none;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.7);
+}
+
+.modal-content {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background-color: #fff;
+  padding: 20px;
+}
+
+.close {
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  font-size: 24px;
+  cursor: pointer;
+}
+
+/* Estilos para el iframe */
+iframe {
+  width: 100%;
+  height: 400px;
+}
+
+/* Animacion Scroll */
+
+html {
+  scroll-behavior: smooth;
+}
+
+/* carousel */
+
+.carousel {
+  padding-top: 10px;
+}
+
+.text-overlay {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  font-size: larger;
+  transform: translate(-50%, -50%);
+  background: rgba(0, 0, 0, 0.5); /* Fondo semi-transparente para que el texto sea legible */
+  color: white;
+  padding: 10px;
+  text-align: center;
+}
+
+.carousel {
+  width: 100vw;
+  height: 100vh;
+  position: relative;
+}
+
+
+.carousel > ul {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+.slide {
+  position: absolute;
+  inset: 0;
+  opacity: 0;
+  transition: 200ms opacity ease-in-out;
+  transition-delay: 200ms;
+}
+
+.slide > img {
+  display: block;
+  width: 100%; 
+  height: 100%;
+  object-fit: center;
+  object-position: center;
+}
+
+.slide[data-active] {
+  opacity: 1;
+  z-index: 1;
+  transition-delay: 0ms;
+}
+
+.carousel-button {
+  position: absolute;
+  z-index: 2;
+  background: none;
+  border: none;
+  font-size: 4rem;
+  top: 50%;
+  transform: translateY(-50%);
+  color: rgb(17, 165, 182);
+  cursor: pointer;
+  border-radius: .25rem;
+  padding: 0 .5rem;
+  background-color: rgba(0, 0, 0, .1);
+}
+
+.carousel-button:hover,
+.carousel-button:focus {
+  color: white;
+  background-color: rgba(0, 0, 0, .2);
+}
+
+.carousel-button:focus {
+  outline: 1px solid black;
+}
+
+.carousel-button.prev {
+  position: absolute;
+  z-index: 2;
+  background: none;
+  border: none;
+  font-size: 4rem;
+  top: 50%;
+  transform: translateY(-50%);
+  color: rgba(255, 0, 0, .7); /* Color rojo, puedes ajustar el color a tu preferencia */
+  cursor: pointer;
+  border-radius: .25rem;
+  padding: 0 .5rem;
+  background-color: rgba(0, 0, 0, .1);
+  left: 1rem; /* Ajusta la posición a la izquierda */
+}
+
+/* Botón siguiente (derecha) */
+.carousel-button.next {
+  position: absolute;
+  z-index: 2;
+  background: none;
+  border: none;
+  font-size: 4rem;
+  top: 50%;
+  transform: translateY(-50%);
+  color: rgba(0, 0, 255, .7); /* Color azul, puedes ajustar el color a tu preferencia */
+  cursor: pointer;
+  border-radius: .25rem;
+  padding: 0 .5rem;
+  background-color: rgba(0, 0, 0, .1);
+  right: 1rem; /* Ajusta la posición a la derecha */
+}
