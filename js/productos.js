@@ -14,7 +14,7 @@ const { createApp } = Vue
         imagen:"",
         stock:0,
         precio:0,
-    }  
+                }  
     },
     methods: {
         fetchData(url) {
