@@ -10,7 +10,8 @@ const { createApp } = Vue
         apellido:"",
         edad:0,
         imagen:"",
-        url:'http://rosario2junio.pythonanywhere.com/'+id,
+        url:'http://rosario2junio.pythonanywhere.com/paciente'+id,
+       //url:''+id,
         }  
     },
     methods: {
