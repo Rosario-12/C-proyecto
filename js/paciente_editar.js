@@ -1,5 +1,5 @@
 console.log(location.search)     // lee los argumentos pasados a este formulario
-var id=location.search.substr(4)  // producto_update.html?id=1
+var id=location.search.substr(4)  // paciente_update.html?id=1
 console.log(id)
 const { createApp } = Vue
   createApp({
