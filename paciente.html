@@ -14,7 +14,7 @@
         <div id="app" class="container">
             <h1>Pacientes</h1>
             <br>
-            <a  class="btn btn-primary" href="producto_nuevo.html">Nuevo</a>
+            <a  class="btn btn-primary" href="paciente_nuevo.html">Nuevo</a>
             <br><br>
             <div v-if="error">
                 <p>Lo sentimos , ........</p>
@@ -30,25 +30,25 @@
                             <thead>
                                 <tr>
                                     <th scope="col">Id</th>
-                                    <th scope="col">Nombre y Apellido</th>
+                                    <th scope="col">Nombre</th>
+                                    <th scope="col">Apellido</th>
                                     <th scope="col">Edad</th>
-                                    <th scope="col">Telefono</th>
                                     <th scope="col">Imagen</th>
                                     <th scope="col">Acciones</th>
                                 </tr>
                             </thead>
                             <tbody>
-                                <tr class=""  v-for="producto in productos">
-                                    <td scope="row">{{producto.id}}</td>
-                                    <td>{{producto.nombre}}</td>
-                                    <td>{{producto.precio}}</td>
-                                    <td>{{producto.stock}}</td>
+                                <tr class=""  v-for="paciente in pacientes">
+                                    <td scope="row">{{paciente.id}}</td>
+                                    <td>{{paciente.nombre}}</td>
+                                    <td>{{paciente.apellido}}</td>
+                                    <td>{{paciente.edad}}</td>
                                     <td>
-                                        <img width="60"  :src="producto.imagen" :alt="producto.nombre">
+                                        <img width="60"  :src="paciente.imagen" :alt="paciente.nombre">
                                     </td>
                                     <td>
-                    			<a class="btn btn-primary" :href="'producto_update.html?id='+ producto.id" >Editar</a>
-                                      <button type="button" class="btn btn-danger" v-on:click="eliminar(producto.id)" >Eliminar</button>
+                    			<a class="btn btn-primary" :href="'paciente_update.html?id='+ paciente.id" >Editar</a>
+                                      <button type="button" class="btn btn-danger" v-on:click="eliminar(paciente.id)" >Eliminar</button>
                                     </td>
                                 </tr>
                             </tbody>

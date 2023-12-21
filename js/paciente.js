@@ -2,7 +2,7 @@ const { createApp } = Vue
   createApp({
     data() {
       return {
-        productos:[],
+        paciente:[],
         //url:'http://localhost:5000/productos', 
    // si el backend esta corriendo local  usar localhost 5000(si no lo subieron a pythonanywhere)
         url:'http://rosario2junio.pythonanywhere.com',   // si ya lo subieron a pythonanywhere
@@ -11,17 +11,17 @@ const { createApp } = Vue
         /*atributos para el guardar los valores del formulario */
         id:0,
         nombre:"", 
+        apellido:"",
+        edad:0,
         imagen:"",
-        stock:0,
-        precio:0,
-                }  
+    }  
     },
     methods: {
         fetchData(url) {
             fetch(url)
                 .then(response => response.json())
                 .then(data => {
-                    this.productos = data;
+                    this.paciente = data;
                     this.cargando=false
                 })
                 .catch(err => {
@@ -42,14 +42,14 @@ const { createApp } = Vue
                 })
         },
         grabar(){
-            let producto = {
+            let paciente = {
                 nombre:this.nombre,
-                precio: this.precio,
-                stock: this.stock,
+                apellido: this.apellido,
+                edad: this.edad,
                 imagen:this.imagen
             }
             var options = {
-                body:JSON.stringify(producto),
+                body:JSON.stringify(paciente),
                 method: 'POST',
                 headers: { 'Content-Type': 'application/json' },
                 redirect: 'follow'
@@ -57,7 +57,7 @@ const { createApp } = Vue
             fetch(this.url, options)
                 .then(function () {
                     alert("Registro grabado")
-                    window.location.href = "./productos.html";  // recarga productos.html
+                    window.location.href = "./paciente.html";  // recarga productos.html
                 })
                 .catch(err => {
                     console.error(err);

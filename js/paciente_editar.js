@@ -7,11 +7,11 @@ const { createApp } = Vue
       return {
         id:0,
         nombre:"",
+        apellido:"",
+        edad:0,
         imagen:"",
-        stock:0,
-        precio:0,
         url:'http://rosario2junio.pythonanywhere.com/'+id,
-       }  
+        }  
     },
     methods: {
         fetchData(url) {
@@ -21,9 +21,9 @@ const { createApp } = Vue
                     console.log(data)
                     this.id=data.id
                     this.nombre = data.nombre;
-                    this.imagen=data.imagen
-                    this.stock=data.stock
-                    this.precio=data.precio                    
+                    this.apellido=data.apellido
+                    this.edad=data.edad
+                    this.imagen=data.imagen                    
                 })
                 .catch(err => {
                     console.error(err);
@@ -31,10 +31,10 @@ const { createApp } = Vue
                 })
         },
         modificar() {
-            let producto = {
+            let paciente = {
                 nombre:this.nombre,
-                precio: this.precio,
-                stock: this.stock,
+                apellido: this.apellido,
+                edad: this.edad,
                 imagen: this.imagen
             }
             var options = {
@@ -46,7 +46,7 @@ const { createApp } = Vue
             fetch(this.url, options)
                 .then(function () {
                     alert("Registro modificado")
-                    window.location.href = "./productos.html"; // navega a productos.html          
+                    window.location.href = "./paciente.html"; // navega a productos.html          
                 })
                 .catch(err => {
                     console.error(err);
