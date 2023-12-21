@@ -2,10 +2,10 @@ const { createApp } = Vue
   createApp({
     data() {
       return {
-        paciente:[],
-        url:'http://localhost:5000/paciente', 
+        pacientes:[],
+        //url:'http://localhost:5000/paciente', 
    // si el backend esta corriendo local  usar localhost 5000(si no lo subieron a pythonanywhere)
-       // url:'http://rosario2junio.pythonanywhere.com',   // si ya lo subieron a pythonanywhere
+        url:'http://rosario2junio.pythonanywhere.com/paciente',   // si ya lo subieron a pythonanywhere
         error:false,
         cargando:true,
         /*atributos para el guardar los valores del formulario */
@@ -21,7 +21,7 @@ const { createApp } = Vue
             fetch(url)
                 .then(response => response.json())
                 .then(data => {
-                    this.paciente = data;
+                    this.pacientes = data;
                     this.cargando=false
                 })
                 .catch(err => {

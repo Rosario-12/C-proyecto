@@ -10,7 +10,8 @@ const { createApp } = Vue
         apellido:"",
         edad:0,
         imagen:"",
-        url:'http://rosario2junio.pythonanywhere.com/paciente'+id,
+        //url: `http://localhost:5000/paciente/${id}`,
+        url:`http://rosario2junio.pythonanywhere.com/paciente/${id}`,
        //url:''+id,
         }  
     },
@@ -39,7 +40,7 @@ const { createApp } = Vue
                 imagen: this.imagen
             }
             var options = {
-                body: JSON.stringify(producto),
+                body: JSON.stringify(paciente),
                 method: 'PUT',
                 headers: { 'Content-Type': 'application/json' },
                 redirect: 'follow'
