@@ -11,7 +11,7 @@ const { createApp } = Vue
         edad:0,
         imagen:"",
         //url: `http://localhost:5000/paciente/${id}`,
-        url:`http://rosario2junio.pythonanywhere.com/paciente/${id}`,
+        url:`https://rosario2junio.pythonanywhere.com/paciente/${id}`,
        //url:''+id,
         }  
     },
